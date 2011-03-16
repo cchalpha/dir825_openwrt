@@ -1,0 +1,42 @@
+config wifi-device  radio0
+	option type     mac80211
+	option channel  3
+	option macaddr	00:24:01:e2:6f:06
+	option hwmode	11ng
+	option htmode	HT20
+	list ht_capab	SHORT-GI-40
+	list ht_capab	TX-STBC
+	list ht_capab	RX-STBC1
+	list ht_capab	DSSS_CCK-40
+	option noscan	1
+	# REMOVE THIS LINE TO ENABLE WIFI:
+	#option disabled 1
+
+config wifi-iface
+	option device   radio0
+	option network  lan
+	option mode     ap
+	option ssid     DLink
+	option encryption psk2
+	option key	changeme
+	
+config wifi-device  radio1
+	option type     mac80211
+	option channel  36
+	option macaddr	00:24:01:e2:6f:07
+	option hwmode	11na
+	option htmode	HT20
+	list ht_capab	SHORT-GI-40
+	list ht_capab	TX-STBC
+	list ht_capab	RX-STBC1
+	list ht_capab	DSSS_CCK-40
+	# REMOVE THIS LINE TO ENABLE WIFI:
+	option disabled 1
+
+config wifi-iface
+	option device   radio1
+	option network  lan
+	option mode     ap
+	option ssid     OpenWrt
+	option encryption none
+

@@ -1,0 +1,15 @@
+
+config 'system'
+	option 'hostname' 'OpenWrt'
+	option 'timezone' 'UTC'
+
+config 'rdate'
+	option 'interface' 'wan'
+
+config 'led' 'usb_led'
+	option 'name' 'USB'
+	option 'sysfs' 'dir825b1:blue:usb'
+	option 'trigger' 'usbdev'
+	option 'dev' '1-1'
+	option 'interval' '50'
+

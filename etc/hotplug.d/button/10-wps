@@ -1,0 +1,9 @@
+#!/bin/sh 
+if [ "$BUTTON" = "wps" ] && [ "$ACTION" = "pressed" ]; then
+	if [ "$ACTION" = "pressed" ]; then
+		exec /sbin/wps_pressed.sh
+	fi
+	if [ "$ACTION" = "released" ]; then
+		exec /sbin/wps_switch.sh
+	fi
+fi
